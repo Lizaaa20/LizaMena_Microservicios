@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZLrDo/+BH88=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Valentina Mena\\Desktop\\Desarrollo de Apilca. de Vanguardia\\MicroServicios\\Gateway\\Gateway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Valentina Mena\\.nuget\\packages\\system.io.hashing\\7.0.0\\system.io.hashing.7.0.0.nupkg.sha512",
+    "C:\\Users\\Valentina Mena\\.nuget\\packages\\yarp.reverseproxy\\2.1.0\\yarp.reverseproxy.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

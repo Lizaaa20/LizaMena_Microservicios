@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  productservice:
+    build:
+      context: ./ProductService
+      dockerfile: Dockerfile
+    container_name: productservice
+    expose:
+      - "8080"
+    networks:
+      - microservices-net
+
+  customerservice:
+    build:
+      context: ./CustomerService
+      dockerfile: Dockerfile
+    container_name: customerservice
+    expose:
+      - "8080"
+    networks:
+      - microservices-net
+
+  orderservice:
+    build:
+      context: ./OrderService
+      dockerfile: Dockerfile
+    container_name: orderservice
+    expose:
+      - "8080"
+    networks:
+      - microservices-net
+
+  gateway:
+    build:
+      context: ./Gateway
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - "5000:8080"
+    depends_on:
+      - productservice
+      - customerservice
+      - orderservice
+    networks:
+      - microservices-net
+
+networks:
+  microservices-net:
+    driver: bridge
